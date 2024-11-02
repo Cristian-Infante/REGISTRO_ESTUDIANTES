@@ -1,0 +1,12 @@
+﻿{{ define "content" }}
+  <h1 class="mt-4">Estadísticas por curso</h1>
+  {{ range . }}
+    <h2>Curso: {{ .Curso }}</h2>
+    <ul>
+      <li>Promedio: {{ .Promedio }}</li>
+      <li>Rango: {{ .Rango }}</li>
+      <li>Varianza: {{ .Varianza }}</li>
+      <li>Desviación Estándar: {{ .DesviacionEstandar }}</li>
+    </ul>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,8 @@
+﻿{{ define "content" }}
+    <h1 class="mt-4">Estudiantes matriculados en el año {{ .Anio }}</h1>
+    <ul>
+        {{ range .Estudiantes }}
+            <li>{{ .Nombre }} {{ .Apellido }}</li>
+        {{ end }}
+    </ul>
+{{ end }}

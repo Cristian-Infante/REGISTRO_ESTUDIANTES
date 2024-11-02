@@ -1,0 +1,19 @@
+﻿{{ define "content" }}
+    <h1 class="mt-4">Promedio de estudiantes por rangos de edad</h1>
+    <table class="table table-bordered mt-4">
+        <thead>
+        <tr>
+            <th>Rango de Edad</th>
+            <th>Promedio</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{ range $rango, $promedio := . }}
+            <tr>
+                <td>{{ $rango }}</td>
+                <td>{{ $promedio }}</td>
+            </tr>
+        {{ end }}
+        </tbody>
+    </table>
+{{ end }}

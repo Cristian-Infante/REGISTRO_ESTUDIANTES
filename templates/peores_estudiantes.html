@@ -1,0 +1,11 @@
+﻿{{ define "content" }}
+  <h1 class="mt-4">Peores estudiantes por curso</h1>
+  {{ range $curso, $estudiantes := .Cursos }}
+    <h2>{{ $curso }}</h2>
+    <ol>
+      {{ range $i, $estudiante := $estudiantes }}
+        <li>{{ $estudiante.Nombre }} {{ $estudiante.Apellido }} - Promedio: {{ $estudiante.Promedio }}</li>
+      {{ end }}
+    </ol>
+  {{ end }}
+{{ end }}
